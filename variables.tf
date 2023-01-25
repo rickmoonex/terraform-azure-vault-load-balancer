@@ -28,6 +28,7 @@ variable "common_tags" {
 }
 
 variable "health_check_path" {
+  default     = "/v1/sys/health?activecode=200&standbycode=200&sealedcode=200&uninitcode=200"
   description = "The endpoint to check for Vault's health status"
   type        = string
 }
@@ -58,6 +59,7 @@ variable "resource_group" {
 }
 
 variable "resource_name_prefix" {
+  default     = "dev"
   description = "Prefix applied to resource names"
   type        = string
 }
